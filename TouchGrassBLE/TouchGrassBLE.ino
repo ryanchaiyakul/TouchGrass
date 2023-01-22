@@ -1,20 +1,19 @@
+#include "NimBLEDevice.h"
 #include "Adafruit_Si7021.h"
 #include "Adafruit_VEML6070.h"
-#include "BluetoothSerial.h"
-
 #include <math.h>
-
-BluetoothSerial SerialBT;
 
 Adafruit_Si7021 sensor = Adafruit_Si7021();
 Adafruit_VEML6070 uv = Adafruit_VEML6070();
 
+const char* SERVICE_UUID = "8e0f4583-7d03-4215-b9af-07aa7a22b50a";
+const char* CHARACTERISTIC_UUID = "a01017da-62af-4ef4-aeb7-ac422ab2b525";
+
 void setup() {
   Serial.begin(115200);
 
-  // Serial setup
-  SerialBT.begin("TouchGrass"); //Bluetooth device name
-
+   NimBLEDevice::init("TouchGrass");
+   
   // Si7021 not found (Wiring is bad)
   if (!sensor.begin()) {
     while(true) {
@@ -188,7 +187,7 @@ void send_json() {
   str_ar[2] = get_json_string("\"RH\"", rh_val);
 
   char* ret = get_json_packet(str_ar, 3);
-  
+
   send(ret);
 
   delete [] uv_val;
@@ -200,13 +199,44 @@ void send_json() {
   delete [] ret;
 }
 
-/**
- * Wrapper function around the send (allow for switching between BL and BLE)
- */
 void send(char* value) {
-  SerialBT.write((unsigned char*) (value), strlen(value));
-}
+  NimBLEScan *pScan = NimBLEDevice::getScan();
+  NimBLEScanResults results = pScan->start(10);
+  
+  NimBLEUUID serviceUuid(SERVICE_UUID);
+  
+  for(int i = 0; i < results.getCount(); i++) {
+      NimBLEAdvertisedDevice device = results.getDevice(i);
 
+      //Serial.println(device.getAddress());
+      
+      if (device.isAdvertisingService(serviceUuid)) {
+          NimBLEClient *pClient = NimBLEDevice::createClient();
+
+          Serial.println("Found device advertising service");
+          
+          if (pClient->connect(&device)) {
+              NimBLERemoteService *pService = pClient->getService(serviceUuid);
+              
+              if (pService != nullptr) {
+                  NimBLERemoteCharacteristic *pCharacteristic = pService->getCharacteristic(CHARACTERISTIC_UUID);
+                  
+                  if (pCharacteristic != nullptr) {
+                      if (pCharacteristic->writeValue(value)) {
+                        Serial.println("Wrote value"); 
+                      } else {
+                        Serial.println("Failed to write value");
+                      }
+                  }
+              }
+          } else {
+            Serial.println("Failed to connect or find characteristic");
+          }
+          
+          NimBLEDevice::deleteClient(pClient);
+      }
+  }
+}
 
 void loop() {
   send_json();

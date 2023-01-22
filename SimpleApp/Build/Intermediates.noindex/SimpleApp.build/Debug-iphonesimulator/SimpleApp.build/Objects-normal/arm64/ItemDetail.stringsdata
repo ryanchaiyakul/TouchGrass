@@ -1,0 +1,16 @@
+{
+  "source": "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/ItemDetail.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Order this"
+      },
+      {
+        "comment": "",
+        "key": "Photo: %@"
+      }
+    ]
+  },
+  "version": 1
+}

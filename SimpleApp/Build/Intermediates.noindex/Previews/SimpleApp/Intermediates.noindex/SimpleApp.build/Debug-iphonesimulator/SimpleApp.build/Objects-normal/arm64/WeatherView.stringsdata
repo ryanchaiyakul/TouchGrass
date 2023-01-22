@@ -1,0 +1,16 @@
+{
+  "source": "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/WeatherView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "MENU"
+      },
+      {
+        "comment": "",
+        "key": "Items: %lld"
+      }
+    ]
+  },
+  "version": 1
+}

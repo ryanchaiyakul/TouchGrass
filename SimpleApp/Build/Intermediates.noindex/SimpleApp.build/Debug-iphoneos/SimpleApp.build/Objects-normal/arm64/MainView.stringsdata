@@ -1,0 +1,16 @@
+{
+  "source": "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/MainView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Menu"
+      },
+      {
+        "comment": "",
+        "key": "Order"
+      }
+    ]
+  },
+  "version": 1
+}

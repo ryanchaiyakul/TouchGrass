@@ -1,0 +1,57 @@
+{
+  "_buildCommand2" : {
+    "command" : "preview"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "c46de93d5fb6f22711e10498494d06c783a8df35f8fb1113a31f4d1fa0a31c0c"
+    }
+  ],
+  "containerPath" : "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator16.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Products",
+      "derivedDataPath" : "/Users/sanjanakale/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/sanjanakale/Library/Developer/Xcode/DerivedData/SimpleApp-dopkwhskibsdswadrxvbqfalftbr/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/sanjanakale/Library/Developer/Xcode/DerivedData/SimpleApp-dopkwhskibsdswadrxvbqfalftbr/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "DSTROOT" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Intermediates.noindex/Previews/SimpleApp/ReleaseProducts",
+          "ENABLE_PREVIEWS" : "YES",
+          "OBJROOT" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Intermediates.noindex/Previews/SimpleApp/Intermediates.noindex",
+          "SYMROOT" : "/Users/sanjanakale/Downloads/SimpleApp/Build/Intermediates.noindex/Previews/SimpleApp/Products"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

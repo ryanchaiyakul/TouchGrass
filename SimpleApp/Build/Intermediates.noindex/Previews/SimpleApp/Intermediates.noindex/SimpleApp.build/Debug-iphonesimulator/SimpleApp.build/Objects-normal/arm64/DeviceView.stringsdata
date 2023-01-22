@@ -1,0 +1,28 @@
+{
+  "source": "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/DeviceView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Device Configuration"
+      },
+      {
+        "comment": "",
+        "key": "Pair Device"
+      },
+      {
+        "comment": "",
+        "key": "Current Device:"
+      },
+      {
+        "comment": "",
+        "key": "_device_name_"
+      },
+      {
+        "comment": "",
+        "key": "enable bluetooth if not already enabled"
+      }
+    ]
+  },
+  "version": 1
+}

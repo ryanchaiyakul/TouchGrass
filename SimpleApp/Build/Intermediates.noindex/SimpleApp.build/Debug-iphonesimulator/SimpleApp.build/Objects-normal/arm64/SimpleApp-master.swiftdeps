@@ -1,0 +1,23 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "64b7ea4470b48981e305daac7b20e824c4a11e52fa3728fcd62a8bad409870dc"
+build_start_time: [1674348229, 19858837]
+build_end_time: [1674348229, 765444993]
+inputs:
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/DeviceView.swift": [1674307717, 499809503]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/GrassMeterView.swift": [1674347389, 699272155]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/GrassScore.swift": [1674348228, 885709285]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/MainView.swift": [1674345973, 380442142]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/SimpleAppApp.swift": [1674345973, 368935108]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/TitleView.swift": [1674345973, 392167568]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/WeatherView.swift": [1674325085, 269087314]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/CheckoutView.swift": [1674286087, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/ContentView.swift": [1674286657, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/Helper.swift": [1568696210, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/ItemDetail.swift": [1674286176, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/ItemRow.swift": [1674285702, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/Menu.swift": [1674286231, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/Order.swift": [1674285649, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/old stuff/OrderView.swift": [1674285644, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/statistics view/StatsData.swift": [1674317991, 284566640]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/statistics view/StatsRow.swift": [1674325846, 583513259]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/statistics view/StatsView.swift": [1674339387, 545322895]

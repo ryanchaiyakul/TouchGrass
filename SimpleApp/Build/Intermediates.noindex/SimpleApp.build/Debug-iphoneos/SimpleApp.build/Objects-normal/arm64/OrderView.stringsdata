@@ -1,0 +1,20 @@
+{
+  "source": "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/OrderView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ORDER"
+      },
+      {
+        "comment": "",
+        "key": "$%lld"
+      },
+      {
+        "comment": "",
+        "key": "Place Order"
+      }
+    ]
+  },
+  "version": 1
+}

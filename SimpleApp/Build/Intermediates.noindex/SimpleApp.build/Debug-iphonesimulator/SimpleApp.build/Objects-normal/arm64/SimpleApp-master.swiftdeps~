@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "64b7ea4470b48981e305daac7b20e824c4a11e52fa3728fcd62a8bad409870dc"
+build_start_time: [1674300178, 660502910]
+build_end_time: [1674300178, 754637956]
+inputs:
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/CheckoutView.swift": !private [1674286087, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/ContentView.swift": !private [1674286657, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/Helper.swift": !private [1568696210, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/ItemDetail.swift": !private [1674286176, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/ItemRow.swift": !private [1674285702, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/MainView.swift": !private [1674286014, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/Menu.swift": !private [1674286231, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/Order.swift": !private [1674285649, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/OrderView.swift": !private [1674285644, 0]
+  "/Users/sanjanakale/Downloads/SimpleApp/SimpleApp/SimpleAppApp.swift": !private [1674286988, 0]

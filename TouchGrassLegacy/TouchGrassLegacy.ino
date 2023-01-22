@@ -24,6 +24,43 @@ void setup() {
   }
 
   uv.begin(VEML6070_4_T);  // 500 ms sampling
+
+  // Interrupt button setup
+  pinMode(23, INPUT_PULLUP);
+  attachInterrupt(23, print_fish, FALLING);
+}
+
+/**
+ * Print Humidity, Temperature, and UV every second
+ */
+void debug_sensors() {
+  Serial.print("Humidity:    ");
+  Serial.print(sensor.readHumidity(), 2);
+  Serial.print("\tTemperature: ");
+  Serial.println(sensor.readTemperature(), 2);
+  Serial.print("UV light level: "); 
+  Serial.println(uv.readUV());
+  delay(1000);
+}
+
+/**
+ * Transmit the input to BT and print the output from BT here
+ */
+void debug_serial() {
+  if (Serial.available()) {
+    SerialBT.write(Serial.read());
+  }
+  if (SerialBT.available()) {
+    Serial.write(SerialBT.read());
+  }
+  delay(20);
+}
+
+/**
+ * Println fish (for button interrupt)
+ */
+void print_fish() {
+  Serial.println("fish");
 }
 
 /**
@@ -57,14 +94,9 @@ char* get_json_string(char* key, char* value, bool comma = false) {
     return ret;
 }
 
-/**
- * Append json strings together and encapsulate with {}
- * Writes to c string passed as ret
- * Size is the size of the array of json strings
- */
 void get_json_packet(char* ret, char** strings, int size) {
     *ret = '{';
-    int cur_length = 1; 
+    int cur_length = 1;
     for (int i = 0; i < size; i++) {
         strcpy(ret + cur_length, strings[i]);
         cur_length += strlen(strings[i]);
@@ -73,7 +105,6 @@ void get_json_packet(char* ret, char** strings, int size) {
 }
 
 // Reverses a string 'str' of length 'len'
-// Used to reverse floating points
 void reverse(char* str, int len)
 {
     int i = 0, j = len - 1, temp;
@@ -145,6 +176,7 @@ void ftoa(float n, char* res, int afterpoint)
         intToStr((int)fpart, res + i + 1, afterpoint);
     }
 }
+ 
 
 /*
  * Gets and formats sensor readings into a json packet
